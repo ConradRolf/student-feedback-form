@@ -11,7 +11,7 @@ function Understanding() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    // creating a local state to trach the value of understanding
+    // creating a local state to track the value of understanding
     const [understanding, setUnderstanding] = useState('')
     const allUnderstanding = useSelector((store) => store.understanding);
 

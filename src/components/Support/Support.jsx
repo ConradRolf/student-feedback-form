@@ -11,7 +11,7 @@ function Support() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    // creating a local state to trach the value of understanding
+    // creating a local state to track the value of understanding
     const [support, setSupport] = useState('')
     const allSupport = useSelector((store) => store.support);
 

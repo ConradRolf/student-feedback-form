@@ -2,15 +2,21 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react"
+// importing the tools we need for the component
 
+// creating the function that will run within the component/app
 function Comments() {
 
+    // creating variable for us to use in the component
     const history = useHistory();
     const dispatch = useDispatch();
 
+    // creating a local state to track the value of understanding
     const [comments, setComments] = useState('')
     const allComments = useSelector((store) => store.comments);
 
+    // creating a function to dispatch inputs to the reducer and reset the input fields/local state
+    // if the input is valid we will be taken to the next section
     const storeComments = () => {
         dispatch({
             type: "COMMENTS",
