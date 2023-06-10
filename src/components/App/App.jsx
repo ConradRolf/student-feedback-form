@@ -7,7 +7,7 @@ import Home from '../Home/Home'
 import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
-import Comments from '../Comments/Commments';
+import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import ThankYou from '../ThankYou/ThankYou';
 
@@ -48,7 +48,7 @@ function App() {
         <Route exact path='/Review'>
           <Review />
         </Route>
-        
+
         <Route exact path='/ThankYou'>
           <ThankYou />
         </Route>

@@ -1,4 +1,8 @@
+import { useHistory } from "react-router-dom";
+
 function Home(){
+
+    const history = useHistory();
 
     const handleClick = () => {
         history.push('/Feelings')
