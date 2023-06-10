@@ -11,7 +11,7 @@ function Support() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    // creating a local state to track the value of understanding
+    // creating a local state to track the variable/value while we are on the page
     const [support, setSupport] = useState('')
     const allSupport = useSelector((store) => store.support);
 
@@ -71,4 +71,5 @@ function Support() {
     )
 }
 
+// exporting to the app
 export default Support

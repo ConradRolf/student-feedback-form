@@ -1,9 +1,13 @@
 import { useHistory } from "react-router-dom";
+// importing the tools we need for the component
 
+// creating the function that will run within the component/app
 function ThankYou() {
 
+    // creating variable for us to use in the component
     const history = useHistory();
 
+    // takes us back to the home page to start another review
     const startOver = () => {
         history.push('/')
     }

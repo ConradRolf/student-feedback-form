@@ -11,7 +11,7 @@ function Understanding() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    // creating a local state to track the value of understanding
+    // creating a local state to track the variable/value while we are on the page
     const [understanding, setUnderstanding] = useState('')
     const allUnderstanding = useSelector((store) => store.understanding);
 
@@ -71,4 +71,5 @@ function Understanding() {
     )
 }
 
+// exporting to the app
 export default Understanding

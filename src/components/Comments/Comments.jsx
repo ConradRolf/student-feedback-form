@@ -11,7 +11,7 @@ function Comments() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    // creating a local state to track the value of understanding
+    // creating a local state to track the variable/value while we are on the page
     const [comments, setComments] = useState('')
     const allComments = useSelector((store) => store.comments);
 
@@ -48,4 +48,5 @@ function Comments() {
     )
 }
 
+// exporting to the app
 export default Comments
