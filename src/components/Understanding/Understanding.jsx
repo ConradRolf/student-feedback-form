@@ -2,15 +2,21 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react"
+// importing the tools we need for the component
 
+// creating the function that will run within the component/app
 function Understanding() {
 
+    // creating variable for us to use in the component
     const history = useHistory();
     const dispatch = useDispatch();
 
+    // creating a local state to trach the value of understanding
     const [understanding, setUnderstanding] = useState('')
     const allUnderstanding = useSelector((store) => store.understanding);
 
+    // creating a function to validate inputs and dispatch them to the reducer and reset the input fields/local state
+    // if the input is valid we will be taken to the next section
     const storeUnderstanding = () => {
         if (understanding === '') {
             alert('Why did you leave it empty? Put in a value 1-10 😡')
@@ -43,6 +49,7 @@ function Understanding() {
         }
     }
 
+    // creating the material for the DoM, and the input field to extract our value from
     return (
         <div>
             <h3>

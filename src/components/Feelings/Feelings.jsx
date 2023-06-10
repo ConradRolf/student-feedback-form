@@ -49,7 +49,7 @@ function Feelings() {
         }
     }
 
-    // creating the material for the DoM
+    // creating the material for the DoM, and the input field to extract our value from
     return (
         <div>
             <h3>
