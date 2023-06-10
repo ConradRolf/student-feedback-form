@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+// creating a route for axios requests
 const reviewRouter = require('./Routes/review.router.js');
 app.use('/review', reviewRouter);
 

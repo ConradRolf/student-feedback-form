@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+// creating a post route for the review component that takes in values and posts them to the data base
 router.post('/', (req, res) => {
     let newReview = req.body;
     console.log(`Adding review`, newReview);
