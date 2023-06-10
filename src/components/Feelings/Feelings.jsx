@@ -2,25 +2,31 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react"
+// importing the tools we will need for the component
 
+// creating the function to run in this component
 function Feelings() {
 
+    // creating variables that will allow us to use some of the tools we brought in
     const history = useHistory();
     const dispatch = useDispatch();
 
+    // creating a local state to track the variable/value while we are on the page
     const [feelings, setFeelings] = useState('')
     const allFeelings = useSelector((store) => store.feeling);
 
+    // creating a function to validate inputs and dispatch them to the reducer and reset the input fields/local state
+    // if the input is valid we will be taken to the next section
     const storeFeelings = () => {
-        if (feelings === ''){
+        if (feelings === '') {
             alert('Why did you leave it empty? Put in a value 1-10 😡')
-        } else if (feelings === '42'){
+        } else if (feelings === '42') {
             alert('Yes, that is the answer to life, the universe, and everything.... But I need a value 1-10 🙃')
             setFeelings('')
-        } else if(feelings > 10){
+        } else if (feelings > 10) {
             alert('I said 1-10 buddy')
             setFeelings('')
-        } else if(feelings < 1){
+        } else if (feelings < 1) {
             alert('I said 1-10 buddy')
             setFeelings('')
         } else if (feelings < 5) {
@@ -33,15 +39,17 @@ function Feelings() {
             console.log('Feelings today:', feelings)
             history.push('/Understanding')
         } else {
-        dispatch({
-            type: "FEELINGS",
-            payload: feelings
-        });
-        setFeelings('')
-        console.log('Feelings today:', feelings)
-        history.push('/Understanding')}
+            dispatch({
+                type: "FEELINGS",
+                payload: feelings
+            });
+            setFeelings('')
+            console.log('Feelings today:', feelings)
+            history.push('/Understanding')
+        }
     }
 
+    // creating the material for the DoM
     return (
         <div>
             <h3>
@@ -63,4 +71,5 @@ function Feelings() {
     )
 }
 
+// exporting to the app
 export default Feelings
