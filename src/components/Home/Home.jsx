@@ -1,4 +1,4 @@
-function homePage(){
+function Home(){
 
     const handleClick = () => {
         history.push('/Feelings')
@@ -16,3 +16,5 @@ function homePage(){
         </>
     )
 }
+
+export default Home
