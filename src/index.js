@@ -14,14 +14,23 @@ const feeling = (state = [], action) => {
 };
 
 const understanding = (state = [], action) => {
+    if (action.type === 'UNDERSTANDING'){
+        return action.payload
+    }
     return state;
 };
 
 const support = (state = [], action) => {
+    if (action.type === 'SUPPORT'){
+        return action.payload
+    }
     return state;
 };
 
 const comments = (state = [], action) => {
+    if (action.type === 'COMMENTS'){
+        return action.payload
+    }
     return state;
 };
 

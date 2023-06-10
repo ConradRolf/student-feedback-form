@@ -12,13 +12,35 @@ function Understanding() {
     const allUnderstanding = useSelector((store) => store.understanding);
 
     const storeUnderstanding = () => {
-        dispatch({
-            type: "UNDERSTANDING",
-            payload: understanding
-        });
-        setUnderstanding('')
-        console.log('Understanding today:', understanding)
-        history.push('/Support')
+        if (understanding === '') {
+            alert('Why did you leave it empty? Put in a value 1-10 😡')
+        } else if (understanding === '42') {
+            alert('Yes, that is the answer to life, the universe, and everything.... But I need a value 1-10 🙃')
+            setUnderstanding('')
+        } else if (understanding > 10) {
+            alert('I said 1-10 buddy')
+            setUnderstanding('')
+        } else if (understanding < 1) {
+            alert('I said 1-10 buddy')
+            setUnderstanding('')
+        } else if (understanding < 5) {
+            alert('You can always ask classmates and instructors questions to further your learning, or request additional help 🙂')
+            dispatch({
+                type: "UNDERSTANDING",
+                payload: understanding
+            });
+            setUnderstanding('')
+            console.log('Understanding today:', understanding)
+            history.push('/Support')
+        } else {
+            dispatch({
+                type: "UNDERSTANDING",
+                payload: understanding
+            });
+            setUnderstanding('')
+            console.log('Understanding today:', understanding)
+            history.push('/Support')
+        }
     }
 
     return (

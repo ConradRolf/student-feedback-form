@@ -10,11 +10,13 @@ function Home(){
 
     return(
         <>
-        <h1>
+        <h3>
             Welcome to the feedback App!
-        </h1>
+        </h3>
         <p>
             Would you like to leave some feedback?
+            <br></br>
+            <br></br>
             <button onClick={handleClick}>Begin</button>
         </p>
         </>
