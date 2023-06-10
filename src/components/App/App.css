@@ -10,6 +10,23 @@
   margin-bottom: 20px;
 }
 
+input{
+  box-shadow: 2px 3px;
+}
+
+input:hover{
+  background-color: rgb(187, 218, 245);
+}
+
+button{
+  background-color: rgb(215, 238, 250);
+  box-shadow: 2px 3px;
+}
+
+button:hover{
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)
+}
+
 .App-title {
   font-size: 2em;
 }
@@ -24,4 +41,9 @@ h4 {
 
 div {
   text-align: center;
+  margin: 5px;
+}
+
+body {
+  background-color: aliceblue;
 }
