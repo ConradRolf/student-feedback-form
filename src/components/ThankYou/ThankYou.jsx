@@ -12,6 +12,7 @@ function ThankYou() {
         history.push('/')
     }
 
+    // creating the material for the DoM, and the button to start another review
     return (
         <div>
             <h3>Thank you for submitting your feedback!</h3>
@@ -21,4 +22,5 @@ function ThankYou() {
     )
 }
 
+// exporting to the app
 export default ThankYou
