@@ -10,9 +10,12 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import ThankYou from '../ThankYou/ThankYou';
+// importing all of the tools we will need in the app, along with the components to form the app
 
+// creating the function that will run inside the app
 function App() {
 
+  // establishing the different routes to different pages within the app
   return (
     <>
 
